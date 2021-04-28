@@ -59,8 +59,7 @@ BlogPostTemplate.propTypes = {
 	helmet: PropTypes.object,
 };
 
-const BlogPost = ({ data }, { pageContext }) => {
-	console.log(pageContext);
+const BlogPost = ({ data }) => {
 	const { markdownRemark: post } = data;
 
 	return (

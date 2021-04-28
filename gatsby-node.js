@@ -31,7 +31,7 @@ exports.createPages = ({ actions, graphql }) => {
 
 		const posts = result.data.allMarkdownRemark.edges;
 
-		posts.forEach(({ edge }, index) => {
+		posts.forEach((edge) => {
 			const id = edge.node.id;
 			createPage({
 				path: edge.node.fields.slug,
@@ -42,7 +42,6 @@ exports.createPages = ({ actions, graphql }) => {
 				// additional data can be passed via context
 				context: {
 					id,
-					index,
 				},
 			});
 		});
